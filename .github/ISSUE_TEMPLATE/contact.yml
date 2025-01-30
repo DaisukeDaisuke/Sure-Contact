@@ -1,0 +1,48 @@
+name: Contact Inquiry
+description: Submit an inquiry to get in touch.
+title: "[Contact] Your subject here"
+labels: ["contact", "inquiry"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reaching out! Please provide the details of your inquiry below.
+        This is to expedite any complaints about the repository, etc. These are publicly available and can be seen by anyone.
+
+  - type: textarea
+    id: message
+    attributes:
+      label: Inquiry Details
+      description: Clearly describe the purpose of your contact.
+      placeholder: "Describe your inquiry here..."
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: agreement
+    attributes:
+      label: Acknowledgement
+      description: Please confirm that your inquiry complies with GitHub's Terms of Service.
+      options:
+        - label: "I confirm that this inquiry is appropriate and adheres to GitHub's guidelines."
+          required: true
+
+  - type: checkboxes
+    id: agreement
+    attributes:
+      label: Acknowledgement
+      description: I agree that no personal information will be included in this communication
+      options:
+        - label: "I agree that no personal information will be included in this communication."
+          required: true
+
+  - type: checkboxes
+    id: agreement
+    attributes:
+      label: Acknowledgement
+      description: I agree to post any questions I may have on this repository.
+      options:
+        - label: "I agree to post any questions I may have on this repository."
+          required: true

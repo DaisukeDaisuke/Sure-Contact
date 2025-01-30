@@ -8,6 +8,10 @@ body:
   - type: markdown
     attributes:
       value: |
+        TIP: If a repository is a fork and clearly violates copyright laws  
+        (e.g., uploading confidential documents in full), filing a DMCA  
+        without warning is an option.
+
         Thank you for reaching out.  
         Please provide detailed information regarding your complaint.  
         **Note:** This complaint will be publicly visible.
@@ -27,6 +31,15 @@ body:
       label: Complaint Details
       description: Briefly explain the issue and its impact. A concise summary is sufficient; detailed evidence is not required.
       placeholder: "Describe the issue and its impact here..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: resolution_preference
+    attributes:
+      label: Preferred Resolution Method
+      description: Specify what action you expect to resolve the complaint (e.g., complete repository removal, making the repository private, modifying/removing specific files, etc.).
+      placeholder: "Describe your preferred resolution method..."
     validations:
       required: true
 

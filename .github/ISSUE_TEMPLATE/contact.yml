@@ -8,9 +8,19 @@ body:
   - type: markdown
     attributes:
       value: |
-        TIP: If a repository is a fork and clearly violates copyright laws  
+        ## ⚠️ Important Notice  
+        **This is NOT an official complaint process.**  
+        This form is a way to contact the repository owner personally.  
+        **If your issue is unrelated to the repository owner, please take the appropriate formal action:**  
+
+        - If this is a GitHub-related issue, please contact **[GitHub Support](https://support.github.com/)**.  
+        - If this is a copyright infringement issue, please consider filing a DMCA takedown request**.  
+
+        ---
+        
+        **TIP:** If a repository is a fork and clearly violates copyright laws  
         (e.g., uploading confidential documents in full), filing a DMCA  
-        without warning is an option.
+        without warning is an option.  
 
         Thank you for reaching out.  
         Please provide detailed information regarding your complaint.  

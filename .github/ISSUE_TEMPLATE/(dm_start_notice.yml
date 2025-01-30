@@ -1,0 +1,64 @@
+name: DM Start Notification
+description: Notify the repository owner that you have started a DM.
+title: "[DM Notice] Private Message Sent"
+labels: ["dm-notice", "inquiry"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ⚠️ 重要: DM確認の遅延を防ぐための通知  
+        このフォームは、**リポジトリオーナーにDMが開始されたことを通知するためのもの** です。  
+        **この通知がない場合、DMは最低でも1カ月以上確認されない可能性があります。**  
+
+        **重要事項**:
+        - 送信されたDMがスパムと判断された場合、**返信は保証されません。**  
+        - 指定されたサービス上でDMを確認できなかった場合、**このIssueで折り返し連絡する場合があります。**  
+        - **悪意のある虚偽の通知** や **悪質なスパム** は、GitHubアカウントのブロック等の対象となります。  
+
+        **スパムと判断する可能性のある例:**
+        - 求人募集  
+        - 副業詐欺  
+        - その他の詐欺行為全般  
+        - 明らかなスパムメッセージ  
+
+        **このフォームはあくまで通知のためのものであり、DMの返信を保証するものではありません。**  
+
+  - type: dropdown
+    id: dm_platform
+    attributes:
+      label: DMを開始したSNS
+      description: どのSNSでDMを送信しましたか？ (Twitter: Daisuke76897125)
+      options:
+        - "Discord (アカウントIDは非公開)"
+        - "X (旧Twitter) (https://x.com/Daisuke76897125)"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: dm_already_sent
+    attributes:
+      label: メッセージ送信確認
+      description: メッセージは既に送信済みですか？
+      options:
+        - label: "はい、既にDMを送信しました。"
+          required: true
+
+  - type: checkboxes
+    id: privacy_agreement
+    attributes:
+      label: Privacy Agreement
+      description: この通知には個人情報を含めないことを確認してください。
+      options:
+        - label: "私はこの通知に個人情報を含めていません。"
+          required: true
+
+  - type: checkboxes
+    id: public_acknowledgment
+    attributes:
+      label: 公開通知の同意
+      description: この通知がパブリックであることを理解し、送信を承諾しますか？
+      options:
+        - label: "私はこの通知が公開されることに同意します。"
+          required: true

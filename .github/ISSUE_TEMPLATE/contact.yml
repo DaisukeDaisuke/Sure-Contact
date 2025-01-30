@@ -1,47 +1,76 @@
-name: Contact Inquiry
-description: Submit an inquiry to get in touch.
-title: "[Contact] Your subject here"
-labels: ["contact", "inquiry"]
+name: Repository Complaint
+description: Submit a complaint regarding a repository.
+title: "[Complaint] Repository Issue"
+labels: ["complaint", "inquiry"]
 assignees: []
 
 body:
   - type: markdown
     attributes:
       value: |
-        Thank you for reaching out! Please provide the details of your inquiry below.
-        This is to expedite any complaints about the repository, etc. These are publicly available and can be seen by anyone.
+        Thank you for reaching out.  
+        Please provide detailed information regarding your complaint.  
+        Note: This complaint will be publicly visible.
+
+  - type: input
+    id: repository_url
+    attributes:
+      label: Target Repository URL
+      description: Provide the full URL of the repository you are complaining about.
+      placeholder: "https://github.com/owner/repository"
+    validations:
+      required: true
 
   - type: textarea
     id: message
     attributes:
-      label: Inquiry Details
-      description: Clearly describe the purpose of your contact.
-      placeholder: "Describe your inquiry here..."
+      label: Complaint Details
+      description: Clearly describe the issue and any supporting information.
+      placeholder: "Describe your complaint here..."
     validations:
       required: true
+
+  - type: input
+    id: organization
+    attributes:
+      label: Affiliated Organization
+      description: If applicable, specify the organization or company you belong to. (Leave blank if individual.)
+      placeholder: "Company/Organization Name"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: authorization
+    attributes:
+      label: Authorization Confirmation
+      description: Confirm that you have the authority to file this complaint on behalf of the organization.
+      options:
+        - label: "I confirm that I have the authority to file this complaint on behalf of the stated organization, and this report is not false."
+          required: true
 
   - type: checkboxes
     id: agreement
     attributes:
       label: Acknowledgement
-      description: Please confirm that your inquiry complies with GitHub's Terms of Service.
+      description: Please confirm that your complaint complies with GitHub's Terms of Service.
       options:
-        - label: "I confirm that this inquiry is appropriate and adheres to GitHub's guidelines."
+        - label: "I confirm that this complaint is appropriate and adheres to GitHub's guidelines."
           required: true
 
   - type: checkboxes
-    id: personalinformation
+    id: personal_information
     attributes:
-      label: personalinformation
-      description: I agree that no personal information will be included in this communication
+      label: Privacy Agreement
+      description: Confirm that no personal information is included in this complaint.
       options:
-        - label: "I agree that no personal information will be included in this communication."
+        - label: "I confirm that no personal information is included in this complaint."
           required: true
 
   - type: checkboxes
-    id: ReplyRepository
+    id: response_permission
     attributes:
-      label: Acknowledgement
-      description: I agree to post any questions I may have on this repository.
+      label: Response Permission
+      description: Allow responses to your complaint in this repository.
       options:
-        - label: "I agree to post any questions I may have on this repository."
+        - label: "I agree that responses to this complaint may be posted publicly in this repository."
+          required: true

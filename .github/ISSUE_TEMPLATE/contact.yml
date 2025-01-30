@@ -10,7 +10,7 @@ body:
       value: |
         Thank you for reaching out.  
         Please provide detailed information regarding your complaint.  
-        Note: This complaint will be publicly visible.
+        **Note:** This complaint will be publicly visible.
 
   - type: input
     id: repository_url
@@ -25,7 +25,7 @@ body:
     id: message
     attributes:
       label: Complaint Details
-      description: Briefly explain the issue and how it affects you or your organization. A concise summary is sufficient.
+      description: Briefly explain the issue and its impact. A concise summary is sufficient; detailed evidence is not required.
       placeholder: "Describe the issue and its impact here..."
     validations:
       required: true
@@ -46,7 +46,7 @@ body:
       description: Confirm that you have the authority to file this complaint on behalf of the organization.
       options:
         - label: "I confirm that I have the authority to file this complaint on behalf of the stated organization, and this report is not false."
-          required: true
+          required: false
 
   - type: checkboxes
     id: agreement
@@ -73,4 +73,13 @@ body:
       description: Allow responses to your complaint in this repository.
       options:
         - label: "I agree that responses to this complaint may be posted publicly in this repository."
+          required: true
+
+  - type: checkboxes
+    id: public_acknowledgment
+    attributes:
+      label: Public Disclosure Agreement
+      description: Confirm that you understand and accept that this complaint will be publicly visible.
+      options:
+        - label: "I agree that this complaint will be publicly visible."
           required: true

@@ -25,8 +25,8 @@ body:
     id: message
     attributes:
       label: Complaint Details
-      description: Clearly describe the issue and any supporting information.
-      placeholder: "Describe your complaint here..."
+      description: Briefly explain the issue and how it affects you or your organization. A concise summary is sufficient.
+      placeholder: "Describe the issue and its impact here..."
     validations:
       required: true
 

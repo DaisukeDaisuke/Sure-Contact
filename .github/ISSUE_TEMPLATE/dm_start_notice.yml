@@ -36,6 +36,16 @@ body:
     validations:
       required: true
 
+  - type: input
+    id: publicName
+    attributes:
+      label: publicName
+      description: 確認しますので、アカウントのidや公開名を入力してください
+      placeholder: "Daisuke76897125"
+    validations:
+      required: false
+
+
   - type: checkboxes
     id: dm_already_sent
     attributes:
@@ -43,15 +53,6 @@ body:
       description: メッセージは既に送信済みですか？
       options:
         - label: "はい、既にDMを送信しました。"
-          required: true
-
-  - type: checkboxes
-    id: privacy_agreement
-    attributes:
-      label: Privacy Agreement
-      description: この通知には個人情報を含めないことを確認してください。
-      options:
-        - label: "私はこの通知に個人情報を含めていません。"
           required: true
 
   - type: checkboxes

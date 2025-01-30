@@ -30,19 +30,18 @@ body:
           required: true
 
   - type: checkboxes
-    id: agreement
+    id: personalinformation
     attributes:
-      label: Acknowledgement
+      label: personalinformation
       description: I agree that no personal information will be included in this communication
       options:
         - label: "I agree that no personal information will be included in this communication."
           required: true
 
   - type: checkboxes
-    id: agreement
+    id: ReplyRepository
     attributes:
       label: Acknowledgement
       description: I agree to post any questions I may have on this repository.
       options:
         - label: "I agree to post any questions I may have on this repository."
-          required: true

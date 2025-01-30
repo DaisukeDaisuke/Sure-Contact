@@ -29,10 +29,10 @@ body:
     id: dm_platform
     attributes:
       label: DMを開始したSNS
-      description: どのSNSでDMを送信しましたか？ Twitter: Daisuke76897125
+      description: どのSNSでDMを送信しましたか？ Twitter Daisuke76897125
       options:
-        - "Discord (アカウントIDは非公開)"
-        - "X (旧Twitter) (https://x.com/Daisuke76897125)"
+        - "Discord アカウントIDは非公開"
+        - "X (旧Twitter) Daisuke76897125"
     validations:
       required: true
 

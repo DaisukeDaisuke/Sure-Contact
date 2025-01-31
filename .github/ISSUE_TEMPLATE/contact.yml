@@ -54,6 +54,15 @@ body:
       required: true
 
   - type: input
+    id: response_deadline
+    attributes:
+      label: Response Deadline
+      description: "If a DMCA request is intended to be submitted, select a grace period starting from the day after this complaint until the request is filed"
+      placeholder: "7 (or specify business days)"
+    validations:
+      required: false
+
+  - type: input
     id: organization
     attributes:
       label: Affiliated Organization

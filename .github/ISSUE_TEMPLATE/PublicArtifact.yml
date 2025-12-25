@@ -76,6 +76,15 @@ body:
         - label: "I confirm that this report complies with GitHub Community Guidelines."
           required: true
 
+  - type: checkboxes
+    id: no_private_information
+    attributes:
+      label: Personal Information Confirmation
+      description: Confirm that this report does not contain any personal or private information that should not be publicly disclosed.
+      options:
+        - label: "I confirm that this report does not include private, confidential, or personally identifiable information that I do not wish to make public."
+          required: true
+
   - type: input
     id: response_deadline
     attributes:

@@ -1,0 +1,115 @@
+name: Public Artifact Complaint
+description: Submit a complaint regarding a publicly available artifact.
+title: "[Complaint] Public Artifact Issue"
+labels: ["complaint", "artifact"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ⚠️ Important Notice
+        **This is NOT an official legal or DMCA process.**
+        This form is intended to contact the repository owner regarding a publicly available artifact.
+
+        - For GitHub platform related issues, contact GitHub Support.
+        - For copyright infringement, consider submitting a formal DMCA takedown request.
+
+        **Note:**  
+        This report will be publicly visible, and responses may also be posted publicly.
+
+        Please provide accurate and truthful information only.
+
+  - type: input
+    id: artifact_url
+    attributes:
+      label: Public Artifact URL
+      description: Provide the full public URL of the artifact in question.
+      placeholder: "https://example.com/path/to/artifact"
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue_description
+    attributes:
+      label: Description of the Issue
+      description: |
+        Describe the problem with the published artifact.
+        A concise explanation is sufficient. Evidence or attachments are not required at this stage.
+      placeholder: "Describe the issue here..."
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: dmca_rights
+    attributes:
+      label: DMCA Authority Confirmation
+      description: Confirm whether you have the legal right to submit a DMCA takedown request for this content.
+      options:
+        - label: "I confirm that I have the legal authority to submit a DMCA takedown request for this artifact."
+          required: false
+
+  - type: checkboxes
+    id: public_visibility
+    attributes:
+      label: Public Visibility Acknowledgement
+      description: This report will be publicly visible.
+      options:
+        - label: "I understand and agree that this report will be publicly visible."
+          required: true
+
+  - type: checkboxes
+    id: public_response_consent
+    attributes:
+      label: Public Response Consent
+      description: Responses to this report may be posted publicly on the linked or transferred page.
+      options:
+        - label: "I agree to receive public responses regarding this report."
+          required: true
+
+  - type: checkboxes
+    id: guideline_confirmation
+    attributes:
+      label: GitHub Community Guidelines Confirmation
+      description: Confirm that this report does not violate GitHub Community Guidelines.
+      options:
+        - label: "I confirm that this report complies with GitHub Community Guidelines."
+          required: true
+
+  - type: input
+    id: response_deadline
+    attributes:
+      label: Response Deadline
+      description: |
+        If you intend to proceed with a formal request (such as DMCA),
+        specify a grace period starting from the day after submission.
+      placeholder: "7 (days)"
+    validations:
+      required: false
+
+  - type: input
+    id: affiliated_organization
+    attributes:
+      label: Affiliated Organization
+      description: Specify the organization you represent, if applicable. Leave blank if you are acting as an individual.
+      placeholder: "Organization or Company Name"
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional_notes
+    attributes:
+      label: Additional Notes
+      description: Any supplementary information or context.
+      placeholder: "Optional additional information..."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: legal_acknowledgement
+    attributes:
+      label: Legal and Accuracy Acknowledgement
+      description: This confirmation has the same intent as the agreement stated below.
+      options:
+        - label: "I confirm that the information provided is accurate, submitted in good faith, and not misleading."
+          required: true

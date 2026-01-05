@@ -1,7 +1,7 @@
 name: Public Artifact Complaint
 description: Submit a complaint regarding a publicly available artifact.
 title: "[Complaint] Public Artifact Issue"
-labels: ["complaint", "artifact"]
+labels: ["in Process", "Waiting for Owner"]
 assignees: []
 
 body:

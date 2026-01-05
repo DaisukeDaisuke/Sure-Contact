@@ -1,7 +1,7 @@
 name: Conversation Request (Public)
 description: Start a public conversation with the repository owner in a clear and efficient manner.
 title: "[Conversation] Clear Question or Proposal"
-labels: ["conversation", "inquiry"]
+labels: ["in Process", "Waiting for Owner"]
 assignees: []
 
 body:

@@ -1,0 +1,119 @@
+name: Conversation Request (Public)
+description: Start a public conversation with the repository owner in a clear and efficient manner.
+title: "[Conversation] Clear Question or Proposal"
+labels: ["conversation", "inquiry"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Purpose
+        This form is for starting a **public conversation** with the repository owner.
+
+        To respect both parties' time, this repository follows the following principles:
+
+        - **Don't ask to ask, just ask**  
+          https://dontasktoask.com/
+        - **No hello**  
+          https://nohello.net/en/
+
+        Please **do not post greetings only** or messages such as:
+        - "Hello"
+        - "Can I ask a question?"
+        - "Are you available?"
+
+        Instead, clearly state your question or request with sufficient context.
+
+        ⚠️ All content submitted through this form is **publicly visible**.
+
+  - type: textarea
+    id: introduction
+    attributes:
+      label: Self Introduction
+      description: |
+        Write a short introduction about yourself.
+        Keep it brief and relevant.
+      placeholder: |
+        Example:
+        I am a developer working on a PocketMine-MP plugin and would like to ask about...
+    validations:
+      required: false
+
+  - type: textarea
+    id: requirements
+    attributes:
+      label: What are your requirements? *
+      description: |
+        Clearly describe your question, request, or proposal.
+
+        Please follow:
+        - Don't ask to ask
+        - No hello
+
+        Include all necessary details so the question can be answered without back-and-forth.
+      placeholder: |
+        Example:
+        I am encountering an issue with X when using Y.
+        Expected behavior:
+        Actual behavior:
+        Relevant code or configuration:
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_info
+    attributes:
+      label: Additional Information
+      description: |
+        Optional.
+        Provide logs, links, references, or any extra context that may help.
+      placeholder: |
+        Links, screenshots, logs, or background information.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: public_consent
+    attributes:
+      label: Public Disclosure Agreement
+      description: |
+        Please confirm your understanding regarding public visibility and conduct.
+      options:
+        - label: "I understand that this submission and all responses will be publicly visible."
+          required: true
+        - label: "I confirm that this submission does not violate the community guidelines."
+          required: true
+        - label: "I agree that using this form for recruitment, job offers, or solicitation may result in blocking or other strict measures."
+          required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Personal Information Confirmation
+
+        Confirm that this report does **not** contain any personal, private, or confidential information
+        that should not be publicly disclosed.
+
+  - type: checkboxes
+    id: personal_info_confirmation
+    attributes:
+      label: Personal Information Confirmation *
+      options:
+        - label: "I confirm that this report does not include private, confidential, or personally identifiable information that I do not wish to make public."
+          required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Public Response Consent
+
+        Responses to this report may be posted publicly on this repository or on linked or transferred pages.
+
+  - type: checkboxes
+    id: public_response_consent
+    attributes:
+      label: Public Response Consent *
+      options:
+        - label: "I agree to receive public responses regarding this report."
+          required: true

@@ -1,7 +1,7 @@
 name: DM Start Notification
 description: Notify the repository owner that you have started a DM.
 title: "[DM Notice] Private Message Sent"
-labels: ["dm-notice", "inquiry"]
+labels: ["in Process", "Waiting for Owner"]
 assignees: []
 
 body:

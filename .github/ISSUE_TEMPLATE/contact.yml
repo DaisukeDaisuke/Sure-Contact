@@ -1,7 +1,7 @@
 name: Repository Complaint
 description: Submit a complaint regarding a repository.
 title: "[Complaint] Repository Issue"
-labels: ["complaint", "inquiry"]
+labels: ["in Process", "Waiting for Owner"]
 assignees: []
 
 body:

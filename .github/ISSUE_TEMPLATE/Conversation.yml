@@ -76,7 +76,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## Business Days and Response Expectations (Optional)
+        ## Business Days and Response Availability (Optional)
 
         The following fields are **optional** and are intended only to help set expectations.
         They do **not** impose any obligation on the repository owner.
@@ -97,12 +97,12 @@ body:
       required: false
 
   - type: checkboxes
-    id: working_days
+    id: reply_available_days
     attributes:
-      label: Your working days
+      label: Days you are likely available to reply
       description: |
-        Select the days you usually work.
-        Providing this information may help the owner reasonably extend their response deadline.
+        Select the days on which you are generally able to read and reply.
+        This information may help the owner reasonably adjust their response timing.
       options:
         - label: Monday
         - label: Tuesday

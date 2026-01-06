@@ -73,6 +73,56 @@ body:
     validations:
       required: false
 
+  - type: markdown
+    attributes:
+      value: |
+        ## Business Days and Response Expectations (Optional)
+
+        The following fields are **optional** and are intended only to help set expectations.
+        They do **not** impose any obligation on the repository owner.
+
+        A "business day" generally means a working day excluding weekends and public holidays,
+        but interpretation may vary by individual.
+
+  - type: input
+    id: requester_response_days
+    attributes:
+      label: Business days required for your reply after receiving a public response
+      description: |
+        If the owner provides a public response, how many business days do you typically need to reply?
+        This helps avoid unnecessary follow-ups.
+      placeholder: |
+        Example: 1
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: working_days
+    attributes:
+      label: Your working days
+      description: |
+        Select the days you usually work.
+        Providing this information may help the owner reasonably extend their response deadline.
+      options:
+        - label: Monday
+        - label: Tuesday
+        - label: Wednesday
+        - label: Thursday
+        - label: Friday
+        - label: Saturday
+        - label: Sunday
+
+  - type: input
+    id: owner_proposal_response_days
+    attributes:
+      label: Business days required to respond to the owner's proposal
+      description: |
+        If the owner makes a proposal or asks for confirmation, how many business days do you expect to need before responding?
+      placeholder: |
+        Example: 2
+    validations:
+      required: false
+
   - type: checkboxes
     id: public_consent
     attributes:

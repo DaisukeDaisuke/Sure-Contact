@@ -125,6 +125,8 @@ body:
           required: true
         - label: "I agree that using this form for recruitment, job offers, or solicitation may result in blocking or other strict measures."
           required: true
+        - label: "I honestly did not read these checkboxes carefully."
+          required: false
 
   - type: markdown
     attributes:

@@ -112,17 +112,6 @@ body:
         - label: Saturday
         - label: Sunday
 
-  - type: input
-    id: owner_proposal_response_days
-    attributes:
-      label: Business days required to respond to the owner's proposal
-      description: |
-        If the owner makes a proposal or asks for confirmation, how many business days do you expect to need before responding?
-      placeholder: |
-        Example: 2
-    validations:
-      required: false
-
   - type: checkboxes
     id: public_consent
     attributes:
